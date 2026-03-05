@@ -1,45 +1,405 @@
-# =========================
+# ___________________________
 # Python
-# =========================
-
+# ___________________________
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+.python-version
+*.pyc
+*.pyo
+*.pyd
+*.def
+*.egg-info/
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Virtual Environment
-.venv/
-venv/
-env/
-
-# =========================
-# IDE
-# =========================
-
-.vscode/
-.idea/
-
-# =========================
-# Sistema Operacional
-# =========================
-
-.DS_Store
-Thumbs.db
-
-# =========================
-# Logs
-# =========================
-
-*.log
-
-# =========================
-# Banco de dados / dados locais
-# =========================
-
-data/banco.json
-
-
-# =========================
-# Arquivos sensíveis
-# =========================
-
+# ___________________________
+# Ambiente Virtual
+# ___________________________
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+.virtualenvs/
+.vscode-server/
+
+# ___________________________
+# Poetry
+# ___________________________
+poetry.lock
+poetry.toml
+.poetry/
+
+# ___________________________
+# Testes e Cobertura
+# ___________________________
+.pytest_cache/
+.pytest/
+.coverage
+.coverage.*
+.coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+coverage.xml
+.cache/
+test-reports/
+junit.xml
+.cov
+.tox/
+
+# ___________________________
+# Qualidade de Código
+# ___________________________
+.mypy_cache/
+.mypy_cache.*
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pylint.d
+.pyre/
+.pytype/
+.pytype/
+.pyre_configuration
+.pyre
+*.orig
+.pylintrc
+.flake8
+.mypy.ini
+pyrightconfig.json
+
+# ___________________________
+# IDEs e Editores
+# ___________________________
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+.project
+.pydevproject
+.settings/
+.classpath
+.factorypath
+.tooling/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+
+# ___________________________
+# Jupyter Notebooks
+# ___________________________
+.ipynb_checkpoints/
+*.ipynb
+!examples/*.ipynb
+
+# ___________________________
+# Dados e Arquivos de Configuração
+# ___________________________
+data/
+!data/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+*.json
+!src/infrastructure/database/schema.json
+*.log
+*.log.*
+*.pid
+*.seed
+*.pid.lock
+.env.local
+.env.*.local
+!.env.example
+*.key
+*.pem
+*.crt
+*.p12
+secrets/
+config_local.py
+settings_local.py
+credentials.json
+client_secret.json
+service-account.json
+
+# ___________________________
+# Diretórios de Build/Dist
+# ___________________________
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-wheel-metadata/
+share/python-wheels/
+*.dylib
+*.dll
+*.so
+__pypackages__/
+
+# ___________________________
+# Docker
+# ___________________________
+.dockerignore
+Dockerfile
+docker-compose*.yml
+*.pid
+*.db
+data/
+logs/
+.env.docker
+docker-compose.override.yml
+.docker/
+
+# ___________________________
+# Logs e Arquivos Temporários
+# ___________________________
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log.*
+*.tmp
+*.temp
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# ___________________________
+# Sistema Operacional
+# ___________________________
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.icloud
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.local
+
+# ___________________________
+# Backup e Merge
+# ___________________________
+*.orig
+*.old
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+*.merge_conflict
+*.rej
+*.patch
+*.diff
+*.patch
+*.diff
+
+# ___________________________
+# Documentação
+# ___________________________
+/site
+/docs/_build
+/docs/build
+/docs/source/_static
+/docs/source/_templates
+*.pdf
+*.epub
+*.mobi
+!docs/requirements.txt
+!docs/Makefile
+!docs/make.bat
+
+# ___________________________
+# Ferramentas de CI/CD
+# ___________________________
+.circleci/
+.drone.yml
+.gitlab-ci.yml
+.travis.yml
+.jenkins/
+.github/FUNDING.yml
+.github/ISSUE_TEMPLATE/
+.github/PULL_REQUEST_TEMPLATE/
+!.github/workflows/
+!.github/CODEOWNERS
+!.github/CODE_OF_CONDUCT.md
+!.github/CONTRIBUTING.md
+!.github/SECURITY.md
+
+# ___________________________
+# Segurança
+# ___________________________
+.credentials
+.credentials.json
+*.pem
+*.p12
+*.pfx
+*.key
+*.crt
+*.csr
+secrets/
+secret/
+secure/
+keystore/
+*.keystore
+*.jks
+*.kdb
+*.rdp
+.htpasswd
+.netrc
+
+# ___________________________
+# Específicos do Projeto
+# ___________________________
+# Dados do banco (exceto se for mock para testes)
+/data/banco.json
+!/data/.gitkeep
+*.hospital.db
+appointments.db
+patients.db
+doctors.db
+
+# Arquivos de logs do sistema
+hospital_appointment.log
+access.log
+error.log
+*.access.log
+*.error.log
+
+# Configurações locais
+config.local.yaml
+config.local.yml
+settings.local.py
+local_settings.py
+.env.development
+.env.production
+.env.test
+
+# Scripts de dados sensíveis
+scripts/*_secrets.py
+scripts/*_credentials.py
+
+# ___________________________
+# Utilitários
+# ___________________________
+# Para manter pastas vazias no git
+!.gitkeep
+!.keep
+
+# Editor directories and files
+.project
+.classpath
+.factorypath
+.settings/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+
+# Arquivos de ambiente do PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+fabric.properties
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+.nb-gradle-properties
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+.history/
+.history/
+
+# ___________________________
+# Arquivos de cache
+# ___________________________
+.hypothesis/
+.tox/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+dmypy.json
+.pyre_configuration
+*.prof
+*.stats
+*.test
+*.coverage
+*.cache
+*.pyc
+__pycache__/
+
+# ___________________________
+# Diretórios grandes/desnecessários
+# __________________________*
+node_modules/
+bower_components/
+jspm_packages/
+web_modules/
+*.asar
+.vagrant/
+.rakeTasks
+tmp/
+temp/
+.tmp/
+.temp/
